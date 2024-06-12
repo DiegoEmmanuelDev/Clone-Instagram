@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import SidebarLeft from './componentes/static/sidebar_left/SidebarLeft';
+import SidebarRight from './componentes/static/sidebar_right/SidebarRght';
+import Feed from './componentes/pages/feed/Feed';
+import Stories from './componentes/pages/stories/Stories';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='lateral_esquerda'>
+        <SidebarLeft></SidebarLeft>
+      </div>
+      <div className='conteudo'>
+        <div className='conteudo_central'>
+          <Feed></Feed>
+        </div>
+        <div className='lateral_direita'>
+          <SidebarRight></SidebarRight>
+        </div>
+      </div>
     </div>
   );
 }

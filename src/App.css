@@ -1,38 +1,22 @@
-.App {
-  text-align: center;
+.App{
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    grid-template-areas: 
+    "esquerda conteudo"
+    "esquerda conteudo";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.lateral_esquerda{
+    grid-area: esquerda;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.conteudo{
+    grid-area: conteudo;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.conteudo::-webkit-scrollbar{
+    width: 0;
 }
